@@ -1,0 +1,37 @@
+<div class="row-fluid">
+	<div class="span12">
+		<div class="row-fluid">
+			<div class="span2">
+				<%= link_to 'New Task', new_task_path, class: "btn btn-primary" %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row-fluid spacer1">
+	<table class="table table-striped">
+	<% unless @tasks.empty? %>
+		<tr>
+			<th>Done</th>
+			<th>Name</th>
+			<th>Options</th>			
+		</tr>
+		<% @tasks.each do |t| %>
+			<tr id="<%= "task_#{t.id}" %>">
+				<td><%= check_box_tag :done, t.done ? false : true, t.done, data: { url: "tasks/#{t.id}/done", remote: true } %></td>
+				<td><%= link_to t.name, task_path(t) %></td>
+				<td>
+					<%= link_to (content_tag :i, nil, class: 'icon-pencil'), edit_task_path(t), id: "edit" %>
+					<%= link_to (content_tag :i, nil, class: 'icon-remove'), task_path(t), id: "remove", method: :delete %>
+				</td>
+			</tr>
+		<% end %>
+	<% else %>
+		<tr>
+			<td>
+				<%= "You have no tasks created, " %>
+				<%= link_to 'create it!', new_task_path %>
+			</td>
+		</tr>
+	<% end %>
+	</table>
+</div>

@@ -1,0 +1,96 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/vagrant/sample_todo/app/models/user.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/vagrant/sample_todo/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/sample_todo/app/helpers/tasks_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/sample_todo/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/vagrant/sample_todo/app/controllers/tasks_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/vagrant/sample_todo/app/models/task.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1373280424
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="row-fluid spacer2">
+					<div class="span2">
+						<%= link_to content_tag(:h4, 'ToDo'), root_path %>
+					</div>
+					<div class="span9">
+						<% if notice %>
+				      <%= content_tag :div, notice, class: 'alert alert-success' %>
+				    <% elsif alert %>
+				      <%=  content_tag :div, alert, class: 'alert alert-error' %>
+						<% else %>
+				      <%= content_tag :div, "" %>
+				    <% end %>
+					</div>
+					<div class="span1">
+						<%= link_to content_tag(:h6, t('.logout')), destroy_user_session_path if user_signed_in? %>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

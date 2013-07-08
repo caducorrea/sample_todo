@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_todo_development
+  pool: 5
+  username: vagrant
+  password: 
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: sample_todo_test
+  pool: 5
+  username: vagrant
+  password: 
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_todo_production
+  pool: 5
+  username: vagrant
+  password: 
+
+cucumber:
+  <<: *test
